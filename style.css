@@ -11,6 +11,9 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* --- Encabezado --- */
 header {
@@ -37,6 +40,46 @@ h1 {
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
+.about-content {
+    display: flex;           
+    align-items: center;      
+    justify-content: center;  
+    gap: 40px;                
+}
+
+/* La Foto */
+.profile-pic {
+    width: 250px;          
+    height: 250px;
+    object-fit: cover;      
+    border-radius: 50%;    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0;       
+}
+
+.about-text-wrapper {
+    max-width: 500px;       
+}
+
+.about-text-wrapper h2 {
+    margin-top: 0;      
+    color: #2c3e50;
+}
+
+/* --- RESPONSIVE (Importante para celulares) --- */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;    
+    }
+    
+    .profile-pic {
+        width: 180px;      
+        height: 180px;
+        margin-bottom: 20px; 
+    }
+}
+
 /* --- Botones y Contacto --- */
 .contact-options {
     display: grid;
@@ -44,21 +87,27 @@ h1 {
     margin-top: 30px;
 }
 
-/* Botón de WhatsApp */
 .btn-whatsapp {
-    display: block;
+    display: flex;           
+    align-items: center;    
+    justify-content: center;  
+    gap: 10px;                
     background-color: #25D366;
     color: white;
-    text-align: center;
-    padding: 15px;
+    padding: 15px 20px;     
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    transition: background 0.3s;
+    transition: all 0.3s ease; 
+    max-width: 100%; 
+    box-sizing: border-box; 
 }
+
 .btn-whatsapp:hover {
     background-color: #128C7E;
+    transform: scale(1.05); 
+    box-shadow: 0 6px 14px rgba(37, 211, 102, 0.6);
 }
 
 /* --- Formulario de Email --- */
@@ -82,7 +131,7 @@ input, textarea {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-family: inherit;
-    box-sizing: border-box; /* Importante para que el padding no rompa el ancho */
+    box-sizing: border-box; 
 }
 button[type="submit"] {
     background-color: #3498db;
@@ -96,5 +145,72 @@ button[type="submit"] {
     transition: background 0.3s;
 }
 button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+/* --- Footer --- */
+footer {
+    background-color: #374d63; 
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Botones Flotantes (Sistema de Contacto) --- */
+
+.btn-flotante-whatsapp {
+    position: fixed;
+    bottom: 20px;    
+    right: 20px;   
+    
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.btn-flotante-whatsapp:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);    
+    box-shadow: 0 6px 14px rgba(37, 211, 102, 0.6);
+}
+
+.btn-flotante-mail {
+    position: fixed;
+    bottom: 90px;    
+    right: 20px;    
+    width: 55px;    
+    height: 55px;
+    
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.btn-flotante-mail:hover {
+    transform: scale(1.1);
     background-color: #2980b9;
 }

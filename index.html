@@ -6,36 +6,48 @@
     <title>Lic. Magritti Romina - Psicóloga</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
         <div class="container">
             <h1>Lic. Magritti Romina</h1>
-            <p class="subtitle">Psicóloga Clínica / Psicoanálisis</p>
+            <p class="subtitle">Psicóloga Clínica</p>
         </div>
     </header>
 
     <div class="container">
         <section class="about">
-            <h2>Sobre mí</h2>
-            <p>
-                Hola, soy Romina. Mi enfoque terapéutico se centra en brindar un espacio seguro y confidencial 
-                para el autoconocimiento y el bienestar emocional. Trabajo con adultos y adolescentes.
-            </p>
+            <div class="about-content">
+                
+                <img src="img/perfil.jpeg" alt="Foto de Lic. Romina" class="profile-pic">
+                
+                <div class="about-text-wrapper">
+                    <h2>Sobre mí</h2>
+                    <p>
+                        Hola, soy Romina. Mi enfoque terapéutico se centra en brindar un espacio seguro y confidencial 
+                        para el autoconocimiento y el bienestar emocional.
+                    </p>
+                </div>
+
+            </div>
         </section>
 
         <section class="contact-section">
             <h2>Contacto</h2>
-            <p>Puedes escribirme directamente por WhatsApp o enviarme un correo a continuación.</p>
+            <p>Escribime directamente por WhatsApp o enviame un correo a continuación.</p>
 
             <div class="contact-options">
                 
-                <a href="https://wa.me/5491144139880?text=Hola,%20quisiera%20info%20sobre%20las%20sesiones." 
-                   class="btn-whatsapp" target="_blank">
-                   Mensaje por WhatsApp
+                <a href="https://wa.me/5491144139880?text=Hola,%20quisiera%20información%20sobre%20las%20sesiones." 
+                    class="btn-whatsapp" 
+                    target="_blank"
+                    aria-label="Enviar mensaje por WhatsApp">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="35" height="35">
+                    Mensaje por WhatsApp
                 </a>
 
-                <div class="email-form">
+                <div class="email-form" id="email-section">
                     <h3>Envíame un correo</h3>
                     <form action="https://formspree.io/f/mgoyovew" method="POST">
                         <div class="form-group">
@@ -53,5 +65,25 @@
             </div>
         </section>
     </div>
+    <footer>
+        <div class="footer-content">
+            <p>Lic. Romina Magritti</p>
+        </div>
+    </footer>
+
+    <a href="#email-section" class="btn-flotante-mail" aria-label="Ir al formulario de contacto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+    </a>
+    <a href="https://wa.me/5491144139880?text=Hola,%20quisiera%20información%20sobre%20las%20sesiones." 
+                    class="btn-flotante-whatsapp" 
+                    target="_blank"
+                    aria-label="Enviar mensaje por WhatsApp">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40" height="40">
+                </a>
+
 </body>
 </html>
+
